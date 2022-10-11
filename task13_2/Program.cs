@@ -15,12 +15,12 @@ namespace task13_2
             if (num < -99 || num > 99)
             {
                 Console.Write("Третья цифра числа " + num);
+                if (num < 0) num*=(-1);
                 while (num >1000 )
                 {
                     num = num / 10;
                 }
                 num = num % 10;
-                if (num < 0) num*=(-1);
                 Console.WriteLine($" равна {num}");
             }
             else
