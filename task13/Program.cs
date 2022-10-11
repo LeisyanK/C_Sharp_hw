@@ -36,7 +36,7 @@ namespace task13
                     znam = znam * 10;
                     count--;
                 }
-                //num2 = num / int.Parse(Math.Pow(10,count-3));
+                //num2 = num / int.Parse(Math.Pow(10,count-3)); // ошибка типов данных
                 //Console.WriteLine("num2="+num2);
                 //Console.WriteLine("znam="+znam);
                 num2 = num / znam;
