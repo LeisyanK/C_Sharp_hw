@@ -16,6 +16,7 @@ namespace task13
                 // Третья справа цифра
                 int num1 = num / 100;
                 num1 = num1 % 10;
+                if (num1 < 0) num1 = num1 * (-1);
                 Console.WriteLine($"Третья справа цифра числа {num} равна {num1}");
 
                 // третья слева цифра
@@ -40,6 +41,7 @@ namespace task13
                 //Console.WriteLine("znam="+znam);
                 num2 = num / znam;
                 num2 = num2 % 10;
+                if (num2 < 0) num2 = num2 * (-1);
                 Console.WriteLine($"Третья слева цифра числа {num} равна {num2}");
             }
             else
