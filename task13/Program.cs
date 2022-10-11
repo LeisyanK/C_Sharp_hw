@@ -29,16 +29,19 @@ namespace task13
                     count++;
                 }
                 //Console.WriteLine("Количество цифр " + count);
-                //Console.WriteLine((count-3)*10);
                 count = count - n;
+                /*double t = Math.Pow(10, count);
+                Console.WriteLine("t="+ t);
+                num2 = Math.Round( num / t ); // ошибка типов данных
+                Console.WriteLine("num2="+num2);
+                */
+
                 int znam = 1;       // знаменатель деления
                 while (count > 0 )
                 {
                     znam = znam * 10;
                     count--;
                 }
-                //num2 = num / int.Parse(Math.Pow(10,count-3)); // ошибка типов данных
-                //Console.WriteLine("num2="+num2);
                 //Console.WriteLine("znam="+znam);
                 num2 = num / znam;
                 num2 = num2 % 10;
