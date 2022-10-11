@@ -7,6 +7,7 @@ namespace task13
         static void Main(string[] args)
         {
             Console.Clear();
+            int n = 3;  // позиция искомой цифры
             Console.WriteLine("Введите любое число:");
             int num = int.Parse(Console.ReadLine());
             //int num = new Random().Next(1, 100000);
@@ -29,7 +30,7 @@ namespace task13
                 }
                 //Console.WriteLine("Количество цифр " + count);
                 //Console.WriteLine((count-3)*10);
-                count = count - 3;
+                count = count - n;
                 int znam = 1;       // знаменатель деления
                 while (count > 0 )
                 {
