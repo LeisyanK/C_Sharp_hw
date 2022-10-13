@@ -6,7 +6,7 @@ namespace task21
     {
         static void Main(string[] args)
         {
-            double Kub(double ax, double ay, double az, double bx, double by, double bz)
+            double Distance(double ax, double ay, double az, double bx, double by, double bz)
             {
                 double result = Math.Sqrt( Math.Pow(bx-ax, 2) + Math.Pow(by-ay, 2) + Math.Pow(bz-az, 2) );
                 return result;
@@ -27,7 +27,7 @@ namespace task21
             double Bz = double.Parse(Console.ReadLine());
 
             //double result = Math.Sqrt( Math.Pow(Bx-Ax, 2) + Math.Pow(By-Ay, 2) + Math.Pow(Bz-Az, 2) );
-            double res = Kub(Ax, Ay, Az, Bx, By, Bz);
+            double res = Distance(Ax, Ay, Az, Bx, By, Bz);
 
             Console.WriteLine($"Расстояние между точками равно {Math.Round(res, 2)}");
         }
