@@ -6,6 +6,8 @@ namespace task33
     {
         static void Main(string[] args)
         {
+
+            /*Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.*/
             MyMain();
 
             static void MyMain()
@@ -21,42 +23,42 @@ namespace task33
                 {
                     Console.WriteLine($"В массиве нет числа {number}");
                 }
-
-                int[] FillArray(int size)
-                {
-                    int[] array = new int[size];
-                    for (int i=0; i<size; i++)
-                    {
-                        array[i] = new Random().Next(size * -1, size);
-                    }
-                    return array;
-                }
-
-                static void PrintArray(int[] array)
-                {
-                    foreach (int el in array)
-                    {
-                        Console.Write($"{el} ");
-                    }
-                    Console.WriteLine();
-                }
-
-                static bool NumberExist(int[] array, int number)
-                {
-
-                    bool res = false;
-                    foreach (int el in array)
-                    {
-                        if (el == number)
-                        {
-                            res = true;
-                            break;
-                        }
-                    }
-                    return res;
-                }
             }
-            
+
+            static int[] FillArray(int size)
+            {
+                int[] array = new int[size];
+                for (int i=0; i<size; i++)
+                {
+                    array[i] = new Random().Next(size * -1, size);
+                }
+                return array;
+            }
+
+            static void PrintArray(int[] array)
+            {
+                foreach (int el in array)
+                {
+                    Console.Write($"{el} ");
+                }
+                Console.WriteLine();
+            }
+
+            static bool NumberExist(int[] array, int number)
+            {
+
+                bool res = false;
+                foreach (int el in array)
+                {
+                    if (el == number)
+                    {
+                        res = true;
+                        break;
+                    }
+                }
+                //Console.WriteLine(res);
+                return res;
+            }
         }
     }
 }
