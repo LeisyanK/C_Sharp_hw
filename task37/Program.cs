@@ -46,7 +46,7 @@ namespace task37
                 {
                     //int[] newArray = new int[n/2+1]; //не проходит, т.к. новый массив будет виден только внутри if
                     size2 = n/2+1;
-                    Console.WriteLine($"size2 = {size2}");
+                    Console.WriteLine($"Размер нового массива = {size2}");
                     //newArray[n/2+1] = array[n/2+1]; 
                 }
                 int[] newArray = new int[size2];
