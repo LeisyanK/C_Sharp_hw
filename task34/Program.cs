@@ -13,7 +13,7 @@ namespace task34
 
             MyMain();
 
-            void MyMain()
+           static void MyMain()
             {
                 int size = EnterNumber();
                 int[] array1 = FillArray(size, 100, 999);
@@ -21,13 +21,13 @@ namespace task34
                 Console.WriteLine($"Количество четных чисел равно {CountEvens(array1)}");
             }
 
-            int EnterNumber()
+           static int EnterNumber()
             {
                 Console.Write("Введите число:");
                 return int.Parse(Console.ReadLine());
             }
 
-            int[] FillArray(int size, int minValue, int maxValue)
+           static int[] FillArray(int size, int minValue, int maxValue)
             {
                 int[] array = new int[size];
                 for (int i=0; i<size; i++)
@@ -37,7 +37,7 @@ namespace task34
                 return array;
             }
 
-            void PrintArray(int[] array)
+           static void PrintArray(int[] array)
             {
                 foreach (int el in array)
                 {
@@ -46,7 +46,7 @@ namespace task34
                 Console.WriteLine();
             }
 
-            int CountEvens(int[] array)
+           static int CountEvens(int[] array)
             {
                 int count = 0;
                 foreach (int el in array)
