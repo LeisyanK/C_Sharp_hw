@@ -13,7 +13,7 @@ namespace task36
 
             MyMain();
 
-            void MyMain()
+           static void MyMain()
             {
                 int size = EnterNumber();
                 int[] array1 = FillArray(size);
@@ -21,13 +21,13 @@ namespace task36
                 Console.WriteLine($"Сумма элементов на нечетных позициях равна {UnevenSum(array1)}");
             }
 
-            int EnterNumber()
+           static int EnterNumber()
             {
                 Console.Write("Введите число: ");
                 return int.Parse(Console.ReadLine());
             }
 
-            int[] FillArray(int size)
+           static int[] FillArray(int size)
             {
                 int[] array = new int[size];
                 for (int i=0; i<size; i++)
@@ -37,7 +37,7 @@ namespace task36
                 return array;
             }
 
-            void PrintArray(int[] array)
+           static void PrintArray(int[] array)
             {
                 foreach (int el in array)
                 {
@@ -46,7 +46,7 @@ namespace task36
                 Console.WriteLine();
             }
 
-            int UnevenSum(int[] array)
+           static int UnevenSum(int[] array)
             {
                 int sum = 0;
                 int i = 1;
