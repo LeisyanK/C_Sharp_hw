@@ -12,7 +12,7 @@ namespace task38
 
             MyMain();
 
-            void MyMain()
+           static void MyMain()
             {
                 double[] array1 = FillArray(10, 1.0, 10.0);
                 PrintArray(array1);
@@ -20,7 +20,7 @@ namespace task38
                 Console.WriteLine($"Разница между максимальным и минимальным элементами массива равна {MaxMinusMin(array1)}");
             }
 
-            double[] FillArray(int size, double minValue, double maxValue)
+           static double[] FillArray(int size, double minValue, double maxValue)
             {
                 double[] array = new double[size];
                 for (int i=0; i<size; i++)
@@ -31,7 +31,7 @@ namespace task38
                 return array;
             }
 
-            void PrintArray(double[] array)
+           static void PrintArray(double[] array)
             {
                 foreach (double el in array)
                 {
@@ -40,7 +40,7 @@ namespace task38
                 Console.WriteLine();
             }
 
-            double MaxMinusMin(double[] array)
+           static double MaxMinusMin(double[] array)
             {
                 double max = array[0];
                 double min = array[0];
