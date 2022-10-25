@@ -8,6 +8,7 @@ void Main()
     FillArray(array1);
     PrintArray(array1);
     int[] array2 = CopyArray(array1);
+    // int[] array2 = array1;
     PrintArray(array2);
 }
 
