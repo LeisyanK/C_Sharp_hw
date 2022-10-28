@@ -21,7 +21,19 @@ void Main()
         Console.Write($"{ArithmeticAverageByColumns2(array, j)} ");
     }
     Console.WriteLine();
+
+    Console.WriteLine("Среднее арифметическое по строкам:");
+    ArithmeticAverageByRows(array);
+
+    Console.WriteLine("Второй способ (по строкам):");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write($"{ArithmeticAverageByRows2(array, i)} ");
+    }
+    Console.WriteLine();
 }
+
+
 
 void FillArray(int[,] array)
 {
@@ -50,25 +62,53 @@ void ArithmeticAverageByColumns(int[,] array)
 {
     for (int j = 0; j < array.GetLength(1); j++)
     {
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < array.GetLength(0); i++)
         {
             sum += array[i, j];
         }
         //double average = sum/array.GetLength(0);
         //Console.Write($"{average} ");
-        Console.Write($"{sum / array.GetLength(0)} ");
+        Console.Write($"{Math.Round(sum / array.GetLength(0), 2)} ");
     }
     Console.WriteLine();
     //Console.WriteLine(10/3);
 }
 
-int ArithmeticAverageByColumns2(int[,] array, int number)
+double ArithmeticAverageByColumns2(int[,] array, int number)
 {
-    int sum = 0;
+    double sum = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         sum += array[i, number];
     }
-    return sum / array.GetLength(0);
+    return Math.Round(sum / array.GetLength(0), 2);
+}
+
+void ArithmeticAverageByRows(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        double sum = 0;
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            sum += array[i, j];
+        }
+        //double average = sum/array.GetLength(0);
+        //Console.Write($"{average} ");
+        Console.Write($"{Math.Round(sum / array.GetLength(1), 2)} ");
+    }
+    Console.WriteLine();
+    //Console.WriteLine(10/3);
+}
+
+double ArithmeticAverageByRows2(int[,] array, int number)
+{
+    double sum = 0;
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        sum += array[number, j];
+        //Console.Write(array[number, j] + " ");
+    }
+    return Math.Round(sum / array.GetLength(1), 2);
 }
