@@ -52,7 +52,7 @@ void ChangeRows(int[,] array)
         
         for (int i = 0; i < rowLength; i++)
         {
-            for (int j = i; j < colLength; j++)
+            for (int j = i+1 ; j < colLength; j++)  // j начинается  с i+1 для того, чтобы обратно не поменять местами предыдущие строки
             {
                 int temp = array[i,j];
                 array[i,j] = array[j,i];
