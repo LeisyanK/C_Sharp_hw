@@ -1,5 +1,8 @@
 ﻿    //Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+Main();
 
+void Main()
+{
     Console.Clear();
     Console.Write("Введите количество строк: ");
     int rows = int.Parse(Console.ReadLine());
@@ -12,8 +15,9 @@
     Console.WriteLine();
     ChangeRows(array);
     PrintArray(array);
+}
 
-    void FillArray(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {

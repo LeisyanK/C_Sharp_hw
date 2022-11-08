@@ -1,7 +1,10 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
 // В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+Main();
 
- Console.Clear();
+void Main()
+{
+    Console.Clear();
     Console.Write("Введите количество строк: ");
     int rows = int.Parse(Console.ReadLine());
     Console.Write("Введите количество столбцов: ");
@@ -10,11 +13,14 @@
     int[,] array = new int[rows, columns];
     FillArray(array);
     PrintArray(array);
-    Console.WriteLine();
-    ChangeRows(array);
     
+    ChangeRows(array);
+    Console.WriteLine("Второй способ (количество строк и столбцов не имеет значения):");
+    int[,] array2 = ChangeRows2(array);
+    PrintArray(array2);
+} 
 
-    void FillArray(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -53,8 +59,23 @@ void ChangeRows(int[,] array)
                 array[j,i] = temp;
             }
         }
+        Console.WriteLine("Первый способ:");
         PrintArray(array);
     }
-    else Console.WriteLine("Замена невозможна");
+    else Console.WriteLine("Первый способ: замена невозможна, т.к. количество строк и столбцов не совпадает.");
 }
 
+int[,] ChangeRows2(int[,] array)
+{
+    int rowLength = array.GetLength(0);
+    int colLength = array.GetLength(1);
+    int[,] newArray = new int[colLength, rowLength];
+    for (int i = 0; i < rowLength; i++)
+    {
+        for (int j = 0; j < colLength; j++)
+        {
+            newArray[j,i] = array[i,j];
+        }
+    }
+    return newArray;
+}
